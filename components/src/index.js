@@ -1,25 +1,22 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import faker from 'faker';
+import CommentDetail from "./CommentDetail";
+import ApprovalCard from "./ApprovalCard";
 const App = () => {
     return (
       <div className="ui container comments">
-          <div className="comment">
-              <a href="/" className="avatar">
-                  <img alt="avatar" src={faker.image.avatar()} />
-              </a>
-              <div className="content">
-                  <a href="/" className="author">
-                      Sam
-                  </a>
-                  <div className="metadata">
-                      <span className="date"> Today</span>
-                  </div>
-                  <div className="text">
-                      Nice post
-                  </div>
-              </div>
-          </div>
+          <ApprovalCard>
+              <CommentDetail author="Sam"/>
+          </ApprovalCard>
+          <ApprovalCard>
+              <CommentDetail author="Alex"/>
+          </ApprovalCard>
+          <ApprovalCard>
+              <CommentDetail author="Jane"/>
+          </ApprovalCard>
+          <ApprovalCard>
+              Are you sure you want to this?
+          </ApprovalCard>
       </div>
     );
 }
