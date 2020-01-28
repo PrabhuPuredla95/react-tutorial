@@ -4,11 +4,11 @@ import SearchBar from './SearchBar'
 import ImageList from './ImageList'
 class App extends React.Component{
     state = { images: [] };
-    onSearchSubmit = (term) =>{
+    onSearchSubmit = (term) => {
         unsplash.get('/search/photos',{
             params:{
                 query: term,
-                per_page: 20
+                per_page: 50
             },
         }).then((response) => {
             this.setState({images: response.data.results})
