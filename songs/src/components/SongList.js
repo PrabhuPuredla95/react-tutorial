@@ -26,8 +26,11 @@ class SongList extends Component{
 };
 
 const mapStateToProps = (state) => {
-    return {songs: state.songs};
+    return {songs: state.songs};//songs is prop in combined reducers
 };
+// this songlist component will require data, which fetches from songs prop from combined reducers
+
+// this connect takes this selectSong action creator and pass it into SongList component as prop
 export default connect(mapStateToProps,{
     selectSong: selectSong
 })(SongList);

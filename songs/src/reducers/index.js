@@ -17,6 +17,6 @@ const selectedSongReducer = (selectedSong=null, action) =>{
 };
 
 export default combineReducers({
-    songs: songsReducer,
+    songs: songsReducer, //songs, selectedSong are variables to be mapped to state variables of components, so that if these variables change, corresponding components will re-render
     selectedSong: selectedSongReducer
 });
